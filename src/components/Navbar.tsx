@@ -19,11 +19,11 @@ const Navbar = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   return (
-    <div className="fixed top-14  w-full h-14 flex items-center justify-center overflow-hidden border-y border-gray-300 bg-white z-10">
+    <div className="ml-52 fixed top-14  w-full h-14 flex items-center justify-start overflow-hidden bg-white">
       {categories.map((category, index) => (
         <button
           key={index}
-          className={`h-8 px-3 text-sm rounded-full whitespace-nowrap cursor-pointer 
+          className={`h-6 px-3 text-xs rounded-full whitespace-nowrap cursor-pointer 
             border border-gray-300 mx-3
             ${
               activeCategory === category

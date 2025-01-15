@@ -1,5 +1,3 @@
-import React from "react";
-
 const videosData = [
   {
     id: 1,
@@ -9,7 +7,6 @@ const videosData = [
     views: "10M views",
     time: "3 Months Ago",
   },
-  // Add more video objects as needed
   {
     id: 2,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
@@ -86,15 +83,16 @@ const videosData = [
 
 const Videos = () => {
   return (
-    <div className="p-4 bg-gray-100">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="ml-52 mt-16 p-4 bg-white">
+    {/* // <div className=" lg:w-3/4 p-4"> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {videosData.map((video) => (
-          <div key={video.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="relative">
+          <div key={video.id} className="bg-white  overflow-hidden cursor-pointer">
+            <div className="relative ">
               <img
                 src={video.thumbnail}
                 alt={video.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-44 rounded-lg"
               />
             </div>
             <div className="flex p-4">
@@ -106,11 +104,11 @@ const Videos = () => {
                 ></span>
               </div>
               <div className="ml-4">
-                <h3 className="text-lg font-medium text-gray-900">{video.title}</h3>
-                <a href="#" className="text-blue-500 hover:underline text-sm">
+                <h3 className="text-sm font-medium text-gray-900">{video.title}</h3>
+                <a href="#" className="text-gray-500 font-medium text-xs">
                   {video.channel}
                 </a>
-                <div className="text-gray-500 text-sm">
+                <div className="text-gray-500 font-medium text-xs">
                   {video.views} • {video.time}
                 </div>
               </div>

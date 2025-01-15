@@ -11,16 +11,13 @@ export default function Home () {
     <div className="flex flex-col h-screen">
       {/* Top Header */}
       <Header />
-      <Navbar />
 
       {/* Content Section */}
-      <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
-        {/* <Sidebar  /> */}
-
-        {/* Main Content */}
+      <div className="flex-row flex-1 overflow-hidden">
+        <Sidebar  />
         <div className="flex-1 flex flex-col overflow-y-auto">
-          {/* <VideosData /> */}
+          <Navbar />
+          <VideosData />
         </div>
       </div>
 
