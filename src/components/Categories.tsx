@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Navbar = () => {
+const Categories = () => {
   const categories = [
     "All",
     "Music",
@@ -19,7 +19,7 @@ const Navbar = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   return (
-    <div className="ml-52 fixed top-14  w-full h-14 flex items-center justify-start overflow-hidden bg-white">
+    <div className="fixed top-14  w-full h-14 flex items-center justify-start overflow-hidden bg-white">
       {categories.map((category, index) => (
         <button
           key={index}
@@ -40,4 +40,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Categories;
