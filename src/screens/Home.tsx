@@ -1,5 +1,6 @@
 import BottomNavbar from "../components/BottomNavbar";
 import Header from "../components/Header";
+import LeftBar from "../components/LeftBar";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import VideosData from "../components/videosData";
@@ -14,7 +15,7 @@ export default function Home () {
 
       {/* Content Section */}
       <div className="flex-row flex-1 overflow-hidden">
-        <Sidebar  />
+        <LeftBar  />
         <div className="flex-1 flex flex-col overflow-y-auto">
           <Navbar />
           <VideosData />

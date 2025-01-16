@@ -4,7 +4,7 @@ const videosData = [
   {
     id: 1,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
-    title: "Lorem ipsum dolor sit amet, consectetur adipisicing elitasdasdasdasdasdasdasdasdasasssss",
+    title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
     channelIcon: <FaUserCircle/>,
     channelName: "Channel 1",
     views: "10M views",
@@ -100,11 +100,20 @@ const videosData = [
     views: "10M views",
     time: "3 Months Ago",
   },
+  {
+    id: 12,
+    thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
+    title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    channelName: "Channel 1",
+    channelIcon: <FaUserCircle/>,
+    views: "10M views",
+    time: "3 Months Ago",
+  },
 ];
 
 const Videos = () => {
   return (
-    <div className="ml-52 mt-12 p-4 bg-white">
+    <div className="ml-52 mt-12 p-4 h-min-screen bg-white">
     {/* // <div className=" lg:w-3/4 p-4"> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {videosData.map((video) => (
