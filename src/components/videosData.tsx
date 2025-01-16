@@ -1,9 +1,12 @@
+import { FaUserCircle } from "react-icons/fa";
+
 const videosData = [
   {
     id: 1,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
-    title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    title: "Lorem ipsum dolor sit amet, consectetur adipisicing elitasdasdasdasdasdasdasdasdasasssss",
+    channelIcon: <FaUserCircle/>,
+    channelName: "Channel 1",
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -11,7 +14,8 @@ const videosData = [
     id: 2,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    channelIcon: <FaUserCircle/>,
+    channelName: "Channel 1",
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -19,7 +23,8 @@ const videosData = [
     id: 3,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    channelName: "Channel 1",
+    channelIcon: <FaUserCircle/>,
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -27,7 +32,8 @@ const videosData = [
     id: 4,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    channelIcon: <FaUserCircle/>,
+    channelName: "Channel 1",
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -35,7 +41,8 @@ const videosData = [
     id: 5,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    channelName: "Channel 1",
+    channelIcon: <FaUserCircle/>,
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -43,7 +50,8 @@ const videosData = [
     id: 6,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    channelName: "Channel 1",
+    channelIcon: <FaUserCircle/>,
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -51,7 +59,8 @@ const videosData = [
     id: 7,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    channelName: "Channel 1",
+    channelIcon: <FaUserCircle/>,
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -59,7 +68,8 @@ const videosData = [
     id: 8,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    channelName: "Channel 1",
+    channelIcon: <FaUserCircle/>,
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -67,7 +77,8 @@ const videosData = [
     id: 9,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    channelName: "Channel 1",
+    channelIcon: <FaUserCircle/>,
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -75,7 +86,17 @@ const videosData = [
     id: 10,
     thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    channel: "Channel 1",
+    channelName: "Channel 1",
+    channelIcon: <FaUserCircle/>,
+    views: "10M views",
+    time: "3 Months Ago",
+  },
+  {
+    id: 11,
+    thumbnail: "https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg",
+    title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    channelName: "Channel 1",
+    channelIcon: <FaUserCircle/>,
     views: "10M views",
     time: "3 Months Ago",
   },
@@ -83,12 +104,12 @@ const videosData = [
 
 const Videos = () => {
   return (
-    <div className="ml-52 mt-16 p-4 bg-white">
+    <div className="ml-52 mt-12 p-4 bg-white">
     {/* // <div className=" lg:w-3/4 p-4"> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {videosData.map((video) => (
-          <div key={video.id} className="bg-white  overflow-hidden cursor-pointer">
-            <div className="relative ">
+          <div key={video.id} className="bg-white cursor-pointer">
+            <div>
               <img
                 src={video.thumbnail}
                 alt={video.title}
@@ -98,17 +119,15 @@ const Videos = () => {
             <div className="flex p-4">
               <div className="flex-shrink-0">
                 <span
-                  className="iconify text-gray-500 text-2xl"
-                  data-icon="carbon:user-avatar-filled"
-                  data-inline="false"
-                ></span>
+                  className="text-gray-500 text-2xl"
+                >{video.channelIcon}</span>
               </div>
               <div className="ml-4">
-                <h3 className="text-sm font-medium text-gray-900">{video.title}</h3>
+                <h3 className="w-48 h-10 text-sm font-medium text-gray-900 line-clamp-2">{video.title}</h3>
                 <a href="#" className="text-gray-500 font-medium text-xs">
-                  {video.channel}
+                  {video.channelName}
                 </a>
-                <div className="text-gray-500 font-medium text-xs">
+                <div className="text-gray-500 font-medium text-[10px]">
                   {video.views} • {video.time}
                 </div>
               </div>
